@@ -7,17 +7,14 @@ const ontology = {
 };
 
 const config = {
-    dataSources: {
-        default: "defaultSource",
-        defaultSource: {
-            type: "mongodb",
-            url: "mongodb+srv://guest:guest@cluster0-ek2ca.mongodb.net/test", 
-            dbName: "staple",
-            collectionName: "staple",
-            description: "MongoDB Atlas Demo instance"
-        }
-    }
-};
+dataSources: {
+    default: "sourceName",
+    sourceName: {
+      type: "sparql",
+      url: " https://api.labs.kadaster.nl/datasets/kadaster/bag2/services/default/sparql", 
+      graphName: "https://bag2.basisregistraties.overheid.nl/bag/graphs/instanties",
+      description: "BAG2 Graph"
+    }};
 
 async function Demo() {
     
